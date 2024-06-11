@@ -7,24 +7,30 @@
     <link rel="stylesheet" href="random.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,700&family=Roboto:wght@500;700&display=swap">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,700&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
     <title>Random</title>
 </head>
-    
-<body>
-    <img src="./Assets/sort 1.png" alt="logo-dice">
-    <main>
-            
-        <section>
-            <h1>Sortear um Número:</h1>
-            <input placeholder="entre" type="number" class="input-min">
-            <input placeholder="e" type="number" class="input-max">
-            <p class="answer" id="resultadoSorteio">Número sorteado:</p>        
-        </section>
-        <button onclick="sortearNumero()">Sortear</button>
-    </main>
-</body>
 
-<script src="./random.js"></script>
+<body>
+    <div class="overlay"></div>
+    <main>
+        <header>
+            <img src="./Assets/sort 1.png" alt="logo-dice">
+        </header>
+
+        <form onsubmit="sortearNumero(event)">
+            <label for="min">Sortear um Número</label>
+            <div class="form-group">
+                <input type="number" id="min" class="input-min" name="min" value="0">
+                <input type="number" id="max" class="input-max" name="max" value="1000">
+            </div>
+            <button type="submit">SORTEAR</button>
+        </form>
+        <p id="resultadoSorteio">Número sorteado: 235</p>
+    </main>
+    <script src="./random.js"></script>
+</body>
 
 </html>

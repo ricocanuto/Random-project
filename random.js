@@ -1,15 +1,14 @@
-function sortearNumero(){
-    
-    const min=Math.floor(document.querySelector('.input-min').value)
-    const max=Math.ceil(document.querySelector('.input-max').value)
+function sortearNumero(event) {
+    event.preventDefault(); // Previne o comportamento padrão do formulário
 
-    const result=Math.floor(Math.random()*(max-min+1))+min;
+    const min = Math.floor(document.querySelector('.input-min').value);
+    const max = Math.ceil(document.querySelector('.input-max').value);
 
-    console.log(min,max)
+    const result = Math.floor(Math.random() * (max - min + 1)) + min;
 
-    const numeroSorteado = document.getElementById("resultadoSorteio")
-    
+    console.log(min, max);
+
+    const numeroSorteado = document.getElementById("resultadoSorteio");
+
     numeroSorteado.textContent = "Número sorteado: " + result;
-
-    
 }
